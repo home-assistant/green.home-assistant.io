@@ -1,0 +1,140 @@
+---
+layout: guide
+guideName: How to reinstall the operating system
+---
+
+<div class="container">
+  <p>
+    <span
+      >Note: It is very unlikely that reinstalling the Home Assistant OS is necessary. Before going through
+      this procedure, make sure to use the built-in <a href="/faq/#can-i-factory-reset-the-system">device wipe mechanism</a>.</span
+    >
+  </p>
+  <p>
+    <span>
+      To reinstall Home Assistant OS, the <b>Home Assistant OS Installer for
+      Yellow</b> flashed on a USB flash drive needs to be used. However, the
+      Raspberry Pi Compute Module 4 has a fixed boot order: <b>eMMC</b> -> <b>NVMe SSD</b> -> <b>USB flash drive</b>.
+    </span>
+  </p>
+  <p>
+    <span>
+      Option 1 disables booting of Home Assistant OS (from eMMC or NVMe SSD),
+      which makes it possible to start the Installer again from a USB flash drive.
+      This option only works if you currently have Home Assistant OS installed!
+    </span>
+  </p>
+  <p>
+    <span><h2>Option 1 (recommended): Reinstall Home Assistant OS using Red + Blue button</h2></span>
+  </p>
+  <ol start="1">
+    <li>
+      <span>Make sure no USB device is plugged into the device. Remove power from your system. </span>
+    </li>
+    <li>
+      <span>Power up the system.</span>
+    </li>
+    <li>
+      <span
+        >Within 3s (or from start), press and hold the red and blue button on
+        the backside of the device simultaneously.</span
+      >
+    </li>
+    <li>
+      <span>Hold the two buttons for approximately 10s. The Yellow LED should not start blinking!</span>
+    </li>
+    <li>
+      <span>Remove power from your system.</span>
+    </li>
+    <li>
+      <span
+        >Follow the instructions to <a href="/power-supply#installing-home-assistant-software-on-kit">
+          install Home Assistant OS</a> using the <b>Home Assistant OS Installer
+          for Yellow</b> from a USB flash drive.</span
+      >
+    </li>
+  </ol>
+  <p>
+    <span><h2 id="install-os-rpiboot">Option 2: Reinstall Home Assistant OS using rpiboot</h2></span>
+  </p>
+  <ol start="1">
+    <li>
+      <span>Install rpiboot onto your computer.</span>
+    </li>
+    <ul>
+      <li>
+        <span
+          >Using Windows Installer
+          <a
+            href="https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe"
+            >here</a
+          ></span
+        >
+      </li>
+      <li>
+        <span
+          >From source code
+          <a
+            href="https://www.raspberrypi.com/documentation/computers/compute-module.html#building-rpiboot-on-your-host-system-cygwinlinux"
+            >here</a
+          ></span
+        >
+      </li>
+    </ul>
+  </ol>
+  <ol start="2">
+    <li>
+      <span><a href="/power-supply/#opening-the-case">Open</a> the Home Assistant Yellow enclosure to access jumpers on the PCB.</span>
+    </li>
+    <li><span>Set JP1 to USB.</span></li>
+    <li>
+      <span
+        >Plug-in a USB-C cable to Home Assistant Yellow and connect it to your
+        PC.</span
+      >
+    </li>
+    <li>
+      <span>Press and hold the <b>USB-C Recvry</b> push button. Older Home Assistant Yellow versions: Bridge JP2 (USB-C Rcvry).</span>
+    </li>
+    <li>
+      <span
+        >Power up the board. Only the red LED should be on at this point (solid, not blinking).</span
+      >
+    </li>    
+    <li><span>Release the <b>USB-C Recvry</b> push button. Older Home Assistant Yellow versions: Un-bridge JP2. </span></li>
+    <li><span>Run rpiboot on your PC and let it run through. Afterwards, the green LED should be on.</span></li>
+    <li>
+      <span
+        >Run the Raspberry Pi Imager and flash the <b>Home Assistant OS Installer for Yellow</b> onto
+        the eMMC ("RPi-MSD"). Refer to 
+        <a href="/power-supply/#installing-the-raspberry-pi-imager">
+          Step 1 through 5</a> from the <b>Installing Home Assistant Software on Kit</b> procedure for the exact steps.
+        Windows might bring up a message asking to insert a disk, this message can be closed. Ignore the
+        Raspberry Pi Imager prompt to remove the SD card. Select <b>Continue</b> and
+        close the Raspberry Pi Installer.
+      </span>
+    </li>
+    <li>
+      <span>Remove power from the board.</span>
+    </li>
+    <li><span>Set JP1 to UART.</span></li>
+    <li><span>Follow the instructions </span
+      ><span
+        ><a
+          href="/power-supply/#connecting-the-ethernet-cable"
+          >here</a
+        ></span
+      ><span
+        >. Note that because the installer is now installed to the eMMC, no USB
+        flash drive is required.</span></li>
+  </ol>
+  <p><span>Resources:</span></p>
+  <p>
+    <span
+      ><a
+        href="https://www.raspberrypi.com/documentation/computers/compute-module.html#steps-to-flash-the-emmc"
+        >Raspberry Pi Steps to Flash eMMC</a
+      ></span
+    >
+  </p>
+</div>

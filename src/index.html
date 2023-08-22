@@ -1,0 +1,68 @@
+---
+layout: base
+description: Home Assistant Green
+guideName: Home Assistant Green
+tools:
+  title: Unboxing
+  image: system_overview.png
+  content: |
+    <ul>
+        <li>Home&nbsp;Assistant Green</li>
+        <li>Ethernet Cable</li>
+        <li>Power Supply</li>
+    </ul>
+procedureStandard:
+  title: Getting started with Home Assistant Green
+  steps:
+    - title: Internet
+      image: getting_started_01.png
+      content: |
+        <ul>
+          <li>Plug in your Ethernet cable and make sure it is locked into place.</li>
+          <li>The other end of the Ethernet cable will need to be connected to your Router or Switch.</li>
+        </ul>
+    - title: Power it up!
+      image: getting_started_02.png
+      content: |
+        <ul>
+          <li>Connect the power to the wall and then to the Home&nbsp;Assistant Green.</li>
+        </ul>
+    - title: Check the status light
+      image: getting_started_03.png
+      content: |
+        <ul>
+          <li>Wait for a few minutes until the yellow light starts
+            blinking regularly.</li>
+        </ul>
+    - title: Getting started with Home Assistant
+      image: getting_started_04.png
+      content: |
+        <ul>
+          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
+          <li><b>Select your Home Assistant Server</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. For example <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+            </ul>
+          <li>The Home Assistant frontend guides you through the initial onboarding.</li>
+          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
+        </ul>
+---
+<div class="container">
+  <div><h1 class="text-center"></h1></div>
+  <div class="layout horizontal guides">
+    <a href="/standard">
+      <h1>Interfaces</h1>
+      <div class="layout vertical center">
+        <img src="/images/green_system-overview.png" />
+      </div>
+    </a>
+  </div>
+  <div class="text-center hint">
+    
+  </div>
+</div>
+{% render "proc.include.liquid", proc: procedureStandard %}
+
+

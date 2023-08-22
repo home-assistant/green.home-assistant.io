@@ -1,0 +1,55 @@
+---
+layout: guide
+guideName: Home Assistant Green LEDs
+---
+
+<div class="container">
+  <p>
+    <span
+      >Home Assistant Green has 3 LEDs.</span
+    >
+  </p>
+  <ul>
+    <li>White LED: Power LED</li>
+    <li>Green LED: Activity LED</li>
+    <li>Yellow LED: Home Assistant Green status LED</li>
+  </ul>
+
+  <h2>Power LED (white)</h2>
+  <span
+    >The power LED indicates whether the CPU is powered. If the LED is off, check the power supply.</span
+  >
+
+  <h2>Activity LED (green)</h2>
+  <span
+    >The activity LED indicates various firmware and boot loader states at
+    startup.</span
+  >
+  <span
+    >Once Home Assistant OS has been started, the green LED indicates activity.
+    Activity is defined as disk (eMMC) or any CPU load.</span
+  >
+  <h2>Status LED (yellow)</h2>
+  <h3>Home Assistant OS</h3>
+  <table>
+    <colgroup>
+      <col style="width: 40%">
+      <col style="width: 60%">
+    </colgroup>
+
+    <thead>
+      <th>Pattern</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Off</td>
+        <td>System is in EEPROM firmware or boot loader mode.</td>
+      </tr>
+      <tr>
+        <td>Heartbeat</td>
+        <td>Home Assistant OS is running.</td>
+      </tr>
+    </tbody>
+  </table> 
+</div>

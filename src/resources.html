@@ -1,0 +1,38 @@
+---
+layout: base
+title: Downloads
+description: Resources | Green
+alias: /ce
+resources:
+- title: Warranty & Safety Information
+  url: /resources/ha-green_warranty-and-safety-information_v1-0.pdf
+  icon: /images/icons/safety-docs.png
+- title: Quick Start Guide
+  url: /resources/ha-green_quick-start-guide_v1-0.pdf
+  icon: /images/icons/file.png
+- title: Datasheet
+  url: /resources/Green_v1.0_Datasheet.pdf
+  icon: /images/icons/datasheet.png
+- title: Declaration of Conformity for EU
+  url: /resources/Green_DoC_EU.pdf
+  icon: /images/icons/good-quality.png
+- title: Declaration of Conformity for UK
+  url: /resources/Green_DoC_UKCA.pdf
+  icon: /images/icons/good-quality.png
+---
+
+<div class="container">
+  <div class="layout horizontal items">
+    {% for resource in resources %}
+    <a href="{{resource.url}}" target="_blank">
+      <div class="layout vertical center">
+
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="{{resource.icon}}" width="150" />
+        </div>
+        {{resource.title}}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
