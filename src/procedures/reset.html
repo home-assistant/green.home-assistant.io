@@ -1,0 +1,38 @@
+---
+layout: getting-started
+description: Home Assistant Green
+guideName: Resetting the device
+tools:
+  title: Prerequsites
+  image: yellow-standard-unboxed.jpeg
+  content: |
+    <ul>
+        <li>Home&nbsp;Assistant Green</li>
+        <li>Micro SD card</li>
+        <li>PC with internet access</li>
+    </ul>
+---
+
+<div class="container">
+  <div><h1 class="text-center"></h1></div>
+  <div class="layout horizontal guides">         
+      <div class="layout vertical">
+        <p>Perform this procedure if you want to do a factory reset. </p>
+      </div>
+    </a>
+  </div>
+  <div class="text-center hint">
+        
+  </div>
+</div>
+
+{% render "tools.include.liquid", tools: tools %}
+<div class="text-center">
+  <div class="layout vertical">
+    <p><b>Notice</b>: This process overwrites the disk on your Green. Unless you perform a backup, you will lose all data.</p>
+  </div>  
+</div>
+
+
+{% render "proc.include.liquid", proc: procedureCopyImageToSdCard %}
+{% render "proc.include.liquid", proc: procedureFactoryReset %}
