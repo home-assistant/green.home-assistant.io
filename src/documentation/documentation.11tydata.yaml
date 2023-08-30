@@ -8,6 +8,10 @@ procedureFactoryReset:
         <ul>
           <li>In your Home Assistant UI, go to <b>Settings</b> > <b>System</b> and select <b>Shutdown system</b>.</li>
           <li>Wait until all the LEDs turned off.</li>
+          <li>In case the shutdown via UI should not work: <ul>
+          <li>To shutdown gracefully, press the power button for 6&nbsp;seconds.</li>
+          <li>For a hard shutdown (do this only if all else fails), press the power button for 12&nbsp;seconds.</li>
+          </ul></li>
         </ul>
     - title: Inserting the SD card
       image: green_reset_insert_sd.webp
@@ -64,7 +68,7 @@ procedureCopyImageToSdCard:
       image-apply-filter: true
       content: |
         <ul>
-          <li>To download the Home Assistant Green OS installer, paste the <a href="https://github.com/NabuCasa/buildroot-installer/releases/tag/green-installer-20230822">URL</a> into your browser.</li>
+          <li>To download the Home Assistant Green OS installer, paste this <a href="https://github.com/NabuCasa/buildroot-installer/releases/tag/green-installer-20230822">URL</a> into your browser.</li>
           <li>To start the download, select the file <i>green-installer-20230822.img.xz</i></li>
           <li>Download and start <a href="https://www.balena.io/etcher">Balena Etcher</a>.
           <ul>
