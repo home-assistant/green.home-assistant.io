@@ -3,36 +3,41 @@ layout: base
 description: Home Assistant Green
 guideName: Home Assistant Green
 tools:
-  title: Unboxing
-  image: system_overview.png
+  title: Prerequisites
+  image: green_getting-started_prereq.png
   content: |
     <ul>
         <li>Home&nbsp;Assistant Green</li>
-        <li>Ethernet Cable</li>
-        <li>Power Supply</li>
+        <li>Ethernet connection to your local network and internet access</li>
+        <li>Webbrowser, tablet, or phone (Android or iOS)</li>
+        <li>Electrical outlet</li>
+        <li>Image is a placeholder.</li>
     </ul>
 procedureStandard:
-  title: Getting started with Home Assistant Green
+  title: Getting started
   steps:
     - title: Internet
-      image: getting_started_01.png
+      image: green_connect_ethernet.webp
       content: |
         <ul>
           <li>Plug in your Ethernet cable and make sure it is locked into place.</li>
-          <li>The other end of the Ethernet cable will need to be connected to your Router or Switch.</li>
+          <li>Connect the other end of the Ethernet cable to your router or switch.</li>
+          <li>Video is a placeholder.</li>
         </ul>
     - title: Power it up!
-      image: getting_started_02.png
+      image: green_connect_power.webp
       content: |
         <ul>
-          <li>Connect the power to the wall and then to the Home&nbsp;Assistant Green.</li>
+          <li>Connect the power to the electrical outlet and then to the Home&nbsp;Assistant Green.</li>
+          <li>Video is a placeholder.</li>
         </ul>
     - title: Check the status light
-      image: getting_started_03.png
+      image: green_yellow_heartbeat.webp
       content: |
         <ul>
           <li>Wait for a few minutes until the yellow light starts
-            blinking regularly.</li>
+            blinking in a heartbeat pattern.</li>
+            <li>Video is a placeholder.</li>
         </ul>
     - title: Getting started with Home Assistant
       image: getting_started_04.png
@@ -49,20 +54,19 @@ procedureStandard:
           <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 ---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureStandard %}
 <div class="container">
   <div><h1 class="text-center"></h1></div>
-  <div class="layout horizontal guides">
-    <a href="/standard">
-      <h1>Interfaces</h1>
+  <div class="layout horizontal guides">         
       <div class="layout vertical center">
+        <h1>Interfaces</h1>
         <img src="/images/green_system-overview.png" />
       </div>
     </a>
   </div>
-  <div class="text-center hint">
-    
+  <div class="text-center hint">    
   </div>
 </div>
-{% render "proc.include.liquid", proc: procedureStandard %}
 
 
