@@ -3,15 +3,40 @@ layout: base
 title: Documentation
 description: Troubleshooting, resources, and videos
 
-troubleshooting:
+system_description:
+  - title: About Home Assistant Green
+    url: /documentation/about_home-assistant_green/
+  - title: Interfaces
+    url: /documentation/interfaces/
   - title: Home Assistant Green LEDs
-    url: /guides/green-leds/
+    url: /documentation/green-leds/
+operation:
+  - title: Shutting down the device
+    url: /guides/shutdown
+  - title: Starting up the device
+    url: /guides/start_up_after_power_off
+troubleshooting:
   - title: Resetting the device
-    url: /documentation/reset
+    url: /guides/reset
 ---
 
 <div class="container">
-  <h1>Guides</h1>
+  <h1>System description</h1>
+  <div class="layout horizontal items">
+    {% for guide in system_description %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+  <h1>Operation</h1>
+  <div class="layout horizontal items">
+    {% for guide in operation %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
   <h2>Troubleshooting</h2>
   <div class="layout horizontal items">
     {% for guide in troubleshooting %}

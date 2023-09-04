@@ -101,3 +101,74 @@ procedureCopyImageToSdCard:
           <li>Once Balena Etcher has finished writing the image, you will see a confirmation.</li>
           <li>You can now remove the SD card.</li>
         </ul>
+procedureShutdown:
+  title: Shutting down the device
+  steps:
+    - title: Shutting down the system from the UI
+      image: shutdown_system.png
+      content: |
+        <ul>
+          <li>In your Home Assistant UI, go to <b>Settings</b> > <b>System</b> and select <b>Shutdown system</b>.</li>
+          <li>Wait until all the LEDs turned off.</li>
+        </ul>
+    - title: Alternative - Shutting down using the hardware button
+      image: green_reset_power-up_after_sd-insert.webp
+      content: |
+        <ul>
+          <li>In case the shutdown via UI should not work: <ul>
+          <li>To shutdown gracefully, press the power button for 6&nbsp;seconds.</li>
+          <li>For a hard shutdown (do this only if all else fails), press the power button for 12&nbsp;seconds.</li>
+          </ul></li>
+          <li>Wait until all the LEDs turned off.</li>
+          <li>Video is a placeholder</li>
+        </ul>
+procedureStartup_after_power_off:
+  title: Starting up the system if it is still connected to Ethernet and power
+  steps:
+    - title: Powering up the system
+      image: green_reset_power-up_heartbeat.webp
+      content: |
+        <ul>
+          <li>Press the power button.</li>
+          <li>Once the yellow LED blinks in a heard beat pattern, the system is ready.</li>
+          <li>Video is a placeholder.</li>
+        </ul>
+    - title: Connect to Home Assistant
+      image: lovelace.png
+      content: |
+        <ul>
+          <li><b>Select your Home Assistant Server</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. For example <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+            </ul>         
+        </ul>
+
+procedureStartup_after_power_off_disconnected:
+  title: Starting up the system if it has been disconnected
+  steps:
+    - title: Internet
+      image: green_connect_ethernet.webp
+      content: |
+        <ul>
+          <li>Plug in your Ethernet cable and make sure it is locked into place.</li>
+          <li>Connect the other end of the Ethernet cable to your router or switch.</li>
+          <li>Video is a placeholder.</li>
+        </ul>
+    - title: Power it up!
+      image: green_connect_power.webp
+      content: |
+        <ul>
+          <li>Connect the power to the electrical outlet and then to the Home&nbsp;Assistant Green.</li>
+          <li>Video is a placeholder.</li>
+        </ul>
+    - title: Connect to Home Assistant
+      image: lovelace.png
+      content: |
+        <ul>
+          <li><b>Select your Home Assistant Server</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. For example <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+            </ul>         
+        </ul>
