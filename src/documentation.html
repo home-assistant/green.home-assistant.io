@@ -15,6 +15,9 @@ operation:
     url: /guides/shutdown
   - title: Starting up the device
     url: /guides/start_up_after_power_off
+data:
+  - title: Creating a backup
+    url: /guides/create-backup
 troubleshooting:
   - title: Resetting the device
     url: /guides/reset
@@ -32,6 +35,14 @@ troubleshooting:
   <h1>Operation</h1>
   <div class="layout horizontal items">
     {% for guide in operation %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+  <h2>Handling data</h2>
+  <div class="layout horizontal items">
+    {% for guide in data %}
     <a href="{{guide.url}}">
       <div class="layout vertical center">{{guide.title}}</div>
     </a>
