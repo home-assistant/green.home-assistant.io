@@ -4,7 +4,7 @@ description: Home Assistant Green
 guideName: Resetting the device
 tools:
   title: Prerequisites
-  image: yellow-standard-unboxed.jpeg
+  image: green_sd_card.png
   content: |
     <ul>
         <li>Home&nbsp;Assistant Green</li>
@@ -29,10 +29,27 @@ tools:
 {% render "tools.include.liquid", tools: tools %}
 <div class="text-center">
   <div class="layout vertical">
-    <p><b>Notice</b>: This process overwrites the disk on your Green. Unless you perform a backup, you will lose all data.</p>
+    <p><b>Notice</b>: This process overwrites the disk on your Green. Unless you <a href="/guides/create-backup/"
+      target="_blank">Create a backup</a>, you will lose all data.</p>
   </div>  
 </div>
 
 
 {% render "proc.include.liquid", proc: procedureCopyImageToSdCard %}
 {% render "proc.include.liquid", proc: procedureFactoryReset %}
+
+<div class="container">
+  
+  <div class="text">         
+    <h1>Related topics</h1>
+    <span>
+      <ul><li><a href="/guides/create-backup/"
+        target="_blank">Creating a backup</a></li>
+        <li><a href="https://www.home-assistant.io/getting-started/onboarding/"
+          target="_blank">Onboarding</a></li>
+        <li><a href="/faq/#i-can-t-access-the-system-via-http-homeassistant-local-8123-what-can-i-do"
+          target="_blank">Can't access homeassistant.local:8123</a></li>
+      </ul>
+    </span>
+  </div>
+</div>

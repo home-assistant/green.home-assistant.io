@@ -18,7 +18,6 @@ procedureFactoryReset:
       content: |
         <ul>
           <li>Insert the SD card with the Home Assistant Green OS installer.</li>
-          <li>Video is a placeholder.</li>
         </ul>
     - title: Powering up the system
       image: green_reset_power-up_after_sd-insert.webp
@@ -28,7 +27,6 @@ procedureFactoryReset:
           <li>The operating system is being written to the eMMC.</li>
           <li>During this time, the yellow LED is blinking fast.</li>
           <li>Wait for the LEDs to turn off.</li>
-          <li>Video is a placeholder.</li>
         </ul>
     - title: Removing the SD card
       image: green_reset_remove_sd-card.webp
@@ -36,7 +34,6 @@ procedureFactoryReset:
         <ul>
           <li>When the LEDs turn off, the operating system has been written to the eMMC.</li>
           <li>Remove the SD card.</li>
-          <li>Video is a placeholder.</li>
         </ul>
     - title: Powering up the system
       image: green_reset_power-up_heartbeat.webp
@@ -44,7 +41,6 @@ procedureFactoryReset:
         <ul>
           <li>Press the power button.</li>
           <li>Once the yellow LED blinks in a heard beat pattern, the system is ready.</li>
-          <li>Video is a placeholder.</li>
         </ul>
     - title: Getting started with Home Assistant
       image: getting_started_04.png
