@@ -1,0 +1,44 @@
+---
+layout: troubleshooting-guide
+description: Home Assistant Green
+guideName: Using the console on the HDMI display
+tools:
+  title: Prerequisites
+  image: green_yellow_heartbeat.webp
+  content: |
+    <ul>
+        <li>Connected Home&nbsp;Assistant Green</li>
+        <li>External USB keyboard</li>
+        <li>HDMI cable and external monitor</li>
+    </ul>
+---
+
+<div class="container">
+  <div><h1 class="text-center"></h1></div>
+  <div class="layout horizontal guides">         
+      <div class="layout vertical">
+        <p>Connecting to Green via console may be required for some troubleshooting tasks, such as resetting the owner's password if they are locked out.</p>
+      </div>
+    </a>
+  </div>
+  <div class="text-center hint">
+        
+  </div>
+</div>
+
+{% render "tools.include.liquid", tools: tools %}
+
+
+{% render "proc.include.liquid", proc: procedureConnectTerminal %}
+
+<div class="container">
+  
+  <div class="text">         
+    <h1>Related topics</h1>
+    <span>
+      <ul><li><a href="https://www.home-assistant.io/docs/locked_out/#to-reset-a-users-password-via-console"
+        target="_blank">Resetting a password via console</a></li>
+      </ul>
+    </span>
+  </div>
+</div>
