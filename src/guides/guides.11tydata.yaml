@@ -167,19 +167,13 @@ procedureStartup_after_power_off_disconnected:
 procedureConnectTerminal:
   title: Using the terminal for troubleshooting
   steps:
-    - title: No HDMI port - install a webcam tool
-      image: guvcview.png
+    - title: Connect an HDMI monitor
+      image: icons/hdmi-monitor.png
+      image-apply-filter: true
       content: |
-        <ol>
-          <li>If your system does not have an HDMI port (for example if you do not have a monitor but are using a laptop), use an HDMI to USB adapter.</li>
-          <li>Download a webcam tool, for example <a href="https://en.wikipedia.org/wiki/Guvcview" target="_blank">Guvcview</a>.</li>
-          <li>Start and set up the webcam tool. 
-            <ul>
-              <li>Set the resolution to full HD.</li>
-              <li>As input source, define USB.</li>
-            </ul>
-          </li>
-        </ol>
+        <ul>
+          <li>Connect an HDMI monitor.</li>
+        </ul>
     - title: Connect a USB keyboard
       image: icons/usb_keyboard.png
       image-apply-filter: true
@@ -191,7 +185,6 @@ procedureConnectTerminal:
       image: home-assistant-cli.png
       content: |
         <ul>
-          <li>If you are using a webcam tool, check the terminal in the webcam tool.</li>
-          <li>If you are using a regular monitor with an HDMI port, the terminal should open automatically.</li>
+          <li>The terminal should open automatically and show up on the monitor.</li>
           <li>In the Home Assistant command line, you can now enter a command.<ul><li>For example, if you are locked out, you can change your password: <br><code>`auth reset --username existing_user --password new_password`</code></li></ul></li>
         </ul>
