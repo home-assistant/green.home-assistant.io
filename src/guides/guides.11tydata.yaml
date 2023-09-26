@@ -186,5 +186,5 @@ procedureConnectTerminal:
       content: |
         <ul>
           <li>The console should open automatically and show up on the monitor.</li>
-          <li>In the Home Assistant command line, you can now enter a command.<ul><li>For example, if you are locked out, you can change your password: <br><code>`auth reset --username existing_user --password new_password`</code></li></ul></li>
+          <li>In the Home Assistant command line, you can now enter a command.<ul><li>For example, if you are locked out, you can change your password: <br><code>auth reset --username existing_user --password new_password</code></li></ul></li>
         </ul>
