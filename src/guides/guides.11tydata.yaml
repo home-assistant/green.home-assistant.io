@@ -172,7 +172,7 @@ procedureConnectTerminal:
       image-apply-filter: true
       content: |
         <ul>
-          <li>Connect an HDMI monitor.</li>
+          <li>Connect an HDMI monitor to Home Assistant Green.</li>
         </ul>
     - title: Connect a USB keyboard
       image: icons/usb_keyboard.png
