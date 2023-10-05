@@ -3,7 +3,9 @@ layout: base
 title: FAQ
 description: FAQ | Green
 faqs:
-  - title: >
+  - section: >
+      General
+    title: >
       I can’t access the system via http://homeassistant.local:8123, what can
       I do?
     content: >      
@@ -30,9 +32,9 @@ faqs:
           <li>You need to install a battery only if you are planning to boot the Home Assistant Green in an environment where there is no internet connection for an extended period of time. Then the clock cannot synchronize.</li>
         </ul>
       </p>
-
-faqs_radios:
-  - title: >
+  - section: >
+      Connectivity
+    title: >
       Does Home Assistant Green have Zigbee, Thread, or Wi-Fi?
     content: >      
       <p>
@@ -50,54 +52,31 @@ faqs_radios:
       </p>
 ---
   <div class="container">
-    <div class="accordion">
-      {% for faq in faqs %}
-      <div class="accordion-item">
-        <button
-          aria-expanded="false"
-          id="{{ faq.title | slugify }}"
-        >
-          <a
-            href="#{{ faq.title | slugify }}"
-            class="anchor"
-          >
-            <span class="accordion-title">{{faq.title}}</span
-            ><span class="icon" aria-hidden="true"></span>
-          </a>
-        </button>
-        <div class="accordion-content">
-          <p>{{faq.content}}</p>
+        <div class="accordion">
+          {% for faq in faqs %}
+          <div class="section">
+            <h2>{{faq.section}}</h2>
+          </div>            
+          <div class="accordion-item">
+            <button
+              aria-expanded="false"
+              id="{{ faq.title | slugify }}"
+            >
+              <a
+                href="#{{ faq.title | slugify }}"
+                class="anchor"
+              >
+                <span class="accordion-title">{{faq.title}}</span
+                ><span class="icon" aria-hidden="true"></span>
+              </a>
+            </button>
+            <div class="accordion-content">
+              <p>{{faq.content}}</p>
+            </div>
+          </div>
+          {% endfor %}
         </div>
-      </div>
-      {% endfor %}
-    </div>
   </div>
-  <div class="container">
-    <h1>Connectivity</h1>
-    <div class="accordion">
-      {% for faq in faqs_radios %}
-      <div class="accordion-item">
-        <button
-          aria-expanded="false"
-          id="{{ faq.title | slugify }}"
-        >
-          <a
-            href="#{{ faq.title | slugify }}"
-            class="anchor"
-          >
-            <span class="accordion-title">{{faq.title}}</span
-            ><span class="icon" aria-hidden="true"></span>
-          </a>
-        </button>
-        <div class="accordion-content">
-          <p>{{faq.content}}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
 <script>
   const items = document.querySelectorAll(".accordion button");
 
