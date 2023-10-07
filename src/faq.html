@@ -2,61 +2,60 @@
 layout: base
 title: FAQ
 description: FAQ | Green
-faqs:
-  - section: >
-      General
-    title: >
-      I can’t access the system via http://homeassistant.local:8123, what can
-      I do?
-    content: >      
-      <p>
-        <ol>
-          <li>Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
-            If that does not help, you may be able to find the IP address of Home
-            Assistant Green on your router. The URL will be <code>http://&lt;IP ADDRESS>:8123</code></li>
-          <li>Check if the Home Assistant Green is plugged in and the yellow LED blinks in a heartbeat pattern. For more information on the LED patterns, see <a href="/documentation/green-leds/" >Home Assistant Green LEDs</a>.</li>
-          <li>Check if the LED on the Ethernet port is green. If it is not green:
+sections:
+  - name: General
+    faqs:
+      - title: >
+          I can’t access the system via http://homeassistant.local:8123, what can I do?
+        content: >      
+          <p>
+            <ol>
+              <li>Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
+                If that does not help, you may be able to find the IP address of Home
+                Assistant Green on your router. The URL will be <code>http://&lt;IP ADDRESS>:8123</code></li>
+              <li>Check if the Home Assistant Green is plugged in and the yellow LED blinks in a heartbeat pattern. For more information on the LED patterns, see <a href="/documentation/green-leds/" >Home Assistant Green LEDs</a>.</li>
+              <li>Check if the LED on the Ethernet port is green. If it is not green:
+                <ul>
+                  <li>Try using a different port on your router.</li>
+                  <li>Try using a different Ethernet cable.</li>
+                </ul>
+              </li>
+            </ol>
+          </p>
+      - title: >
+          Why is there an optional CR2032 battery? Do I need to add one?
+        content: >      
+          <p>
             <ul>
-              <li>Try using a different port on your router.</li>
-              <li>Try using a different Ethernet cable.</li>
+              <li>The battery serves as a backup power supply for the real-time clock.</li>
+              <li>You need to install a battery only if you are planning to boot the Home Assistant Green in an environment where there is no internet connection for an extended period of time. Then the clock cannot synchronize.</li>
             </ul>
-          </li>
-        </ol>
-      </p>
-  - title: >
-      Why is there an optional CR2032 battery? Do I need to add one?
-    content: >      
-      <p>
-        <ul>
-          <li>The battery serves as a backup power supply for the real-time clock.</li>
-          <li>You need to install a battery only if you are planning to boot the Home Assistant Green in an environment where there is no internet connection for an extended period of time. Then the clock cannot synchronize.</li>
-        </ul>
-      </p>
-  - section: >
-      Connectivity
-    title: >
-      Does Home Assistant Green have Zigbee, Thread, or Wi-Fi?
-    content: >      
-      <p>
-        <ul>
-          <li>No. Home Assistant Green does not have any onboard radios.</li>
-        </ul>
-      </p>
-  - title: >
-      Can I connect a Z-Wave or Zigbee USB dongle?
-    content: >      
-      <p>
-        <ul>
-          <li>Yes, you can connect both a Z-Wave and a Zigbee stick via USB. For Zigbee, you could use a <a href="https://www.home-assistant.io/skyconnect" >Home Assistant SkyConnect</a>, for example.</li>
-        </ul>
-      </p>
+          </p>
+  - name: Connectivity
+    faqs:
+      - title: >
+          Does Home Assistant Green have Zigbee, Thread, or Wi-Fi?
+        content: >      
+          <p>
+            <ul>
+              <li>No. Home Assistant Green does not have any onboard radios.</li>
+            </ul>
+          </p>
+      - title: >
+          Can I connect a Z-Wave or Zigbee USB dongle?
+        content: >      
+          <p>
+            <ul>
+              <li>Yes, you can connect both a Z-Wave and a Zigbee stick via USB. For Zigbee, you could use a <a href="https://www.home-assistant.io/skyconnect" >Home Assistant SkyConnect</a>, for example.</li>
+            </ul>
+          </p>
 ---
   <div class="container">
+    {% for section in sections %}
+      <div class="section">
+        <h2>{{section.name}}</h2>      
         <div class="accordion">
-          {% for faq in faqs %}
-          <div class="section">
-            <h2>{{faq.section}}</h2>
-          </div>            
+          {% for faq in section.faqs %}
           <div class="accordion-item">
             <button
               aria-expanded="false"
@@ -76,9 +75,11 @@ faqs:
           </div>
           {% endfor %}
         </div>
+      </div>
+      {% endfor %}
   </div>
 <script>
-  const items = document.querySelectorAll(".accordion button");
+  const items = document.querySelectorAll(".section .accordion button");
 
   function toggleAccordion() {
     const itemToggle = this.getAttribute("aria-expanded");
