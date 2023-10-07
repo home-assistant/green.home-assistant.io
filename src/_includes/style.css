@@ -338,6 +338,11 @@ hr {
   justify-content: center;
 }
 
+.videos_getting_started {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .video {
   width: 650px;
   margin: 16px;

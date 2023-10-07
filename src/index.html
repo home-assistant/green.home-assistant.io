@@ -2,6 +2,9 @@
 layout: base
 description: Home Assistant Green
 guideName: Home Assistant Green
+videos:
+  - url: "https://youtube.com/embed/u8sk6B8_Qkc?start=33"
+    
 tools:
   title: Prerequisites
   image: green_getting-started_prereq.png
@@ -12,6 +15,7 @@ tools:
         <li>Webbrowser, tablet, or phone (Android or iOS)</li>
         <li>Electrical outlet</li>
     </ul>
+
 procedureStandard:
   title: Getting started
   steps:
@@ -50,6 +54,24 @@ procedureStandard:
           <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 ---
+
+<div >
+  {% for video in videos %}
+  <div class="container">
+    <iframe
+      width="650"
+      height="365"
+      src="{{ video.url}}"
+      title="{{ video.title}}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {% endfor %}
+</div>
+
+
 {% render "tools.include.liquid", tools: tools %}
 {% render "proc.include.liquid", proc: procedureStandard %}
 
