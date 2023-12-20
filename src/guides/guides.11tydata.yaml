@@ -40,7 +40,7 @@ procedureFactoryReset:
       content: |
         <ul>
           <li>Press the power button.</li>
-          <li>Once the yellow LED blinks in a heard beat pattern, the system is ready.</li>
+          <li>Once the yellow LED blinks in a heartbeat pattern, the system is ready.</li>
         </ul>
     - title: Getting started with Home Assistant
       image: getting_started_04.png
