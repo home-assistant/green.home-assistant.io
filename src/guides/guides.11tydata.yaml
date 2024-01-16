@@ -18,6 +18,7 @@ procedureFactoryReset:
       content: |
         <ul>
           <li>Insert the SD card with the Home Assistant Green OS installer.</li>
+          <li>Make sure the Home Assistant Green is connected to the Internet.</li>
         </ul>
     - title: Powering up the system
       image: green_reset_power-up_after_sd-insert.webp
