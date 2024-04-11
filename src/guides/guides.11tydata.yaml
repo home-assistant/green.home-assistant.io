@@ -65,8 +65,8 @@ procedureCopyImageToSdCard:
       image-apply-filter: true
       content: |
         <ul>
-          <li>To download the Home Assistant Green OS installer, paste this <a href="https://github.com/NabuCasa/buildroot-installer/releases/tag/green-installer-20230822">URL</a> into your browser.</li>
-          <li>To start the download, select the file <i>green-installer-20230822.img.xz</i></li>
+          <li>To download the Home Assistant Green OS installer, paste this <a href="https://github.com/NabuCasa/buildroot-installer/releases/tag/green-installer-20240410">URL</a> into your browser.</li>
+          <li>To start the download, select the file <i>green-installer-20240410.img.xz</i></li>
           <li>Download and start <a href="https://www.balena.io/etcher">Balena Etcher</a>.
           <ul>
             <li>You may need to run it with administrator privileges on Windows.</li>
