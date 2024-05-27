@@ -6,7 +6,8 @@ procedureFactoryReset:
       image: shutdown_system.png
       content: |
         <ul>
-          <li>In your Home Assistant UI, go to <b>Settings</b> > <b>System</b> and select <b>Shutdown system</b>.</li>
+          <li>In your Home Assistant UI, go to <b>Settings</b> > <b>System</b> and in the top right, select the three-dots menu. Select <b>Restart Home Assistant</b>.</li>
+          <li>Then, select <b>Shut down system</b></li>
           <li>Wait until all the LEDs turned off.</li>
           <li>In case the shutdown via UI should not work: <ul>
           <li>To shutdown gracefully, press the power button for 6&nbsp;seconds.</li>
@@ -105,7 +106,8 @@ procedureShutdown:
       image: shutdown_system.png
       content: |
         <ul>
-          <li>In your Home Assistant UI, go to <b>Settings</b> > <b>System</b> and select <b>Shutdown system</b>.</li>
+          <li>In your Home Assistant UI, go to <b>Settings</b> > <b>System</b> and in the top right, select the three-dots menu. Select <b>Restart Home Assistant</b>.</li>
+          <li>Then, select <b>Shut down system</b></li>
           <li>Wait until all the LEDs turned off.</li>
         </ul>
     - title: Alternative - Shutting down using the hardware button
