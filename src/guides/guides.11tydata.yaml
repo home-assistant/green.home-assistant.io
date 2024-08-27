@@ -80,7 +80,7 @@ procedureFactoryResetNew:
         <ul>
           <li>Press and hold the button.</li>
           <li>Reapply power and make sure the system has an Internet connection.</li>
-          <li>Keep the button pressed until the yellow LED turns on solid.</li>
+          <li>Keep the button pressed until the yellow LED turns on solid.<ul><li><b>Troubleshooting</b>: The yellow LED blinks, instead of turning on solid. This means you do not have the HAOS version required to perform this procedure. In this case, <a href="/guides/reset_with_sd_card/">Reset the device using an SD card</a></li></ul></li>
           <li>Release the button.</li>
             <ul>
               <li>The LEDs start blinking.</li>
