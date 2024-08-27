@@ -58,6 +58,50 @@ procedureFactoryReset:
           <li>The Home Assistant user interface guides you through the initial onboarding.</li>
           <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
+procedureFactoryResetNew:
+  title: Resetting the device
+  steps:
+    - title: Shutting down the system
+      image: shutdown_system.png
+      content: |
+        <ul>
+          <li>In your Home Assistant UI, go to <b>Settings</b> > <b>System</b> and in the top right, select the three-dots menu. Select <b>Restart Home Assistant</b>.</li>
+          <li>Then, select <b>Shut down system</b></li>
+          <li>Wait until all the LEDs turned off.</li>
+          <li>In case the shutdown via UI should not work: <ul>
+          <li>To shutdown gracefully, press the power button for 6&nbsp;seconds.</li>
+          <li>For a hard shutdown (do this only if all else fails), press the power button for 12&nbsp;seconds.</li>
+          </ul></li>
+          <li>Remove the power cable to remove power from the system.</li>
+        </ul>
+    - title: Powering up the system
+      image: green_reset.webp
+      content: |
+        <ul>
+          <li>Press and hold the button.</li>
+          <li>Reapply power and make sure the system has an Internet connection.</li>
+          <li>Keep the button pressed until the yellow LED turns on solid.</li>
+          <li>Release the button.</li>
+            <ul>
+              <li>The LEDs start blinking.</li>
+              <li>The Home Assistant operating system now downloads the latest version of Home Assistant Supervisor and Home Assistant Core.</li>
+              <li>Due to the downloads, it can take a while until Home Assistant becomes accessible again.</li>
+          </ul>
+        </ul>
+    - title: Getting started with Home Assistant
+      image: getting_started_04.png
+      content: |
+        <ul>
+          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
+          <li><b>Select your Home Assistant server</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. For example <code>http://192.168.1.196:8123</code></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant user interface.</li></li>
+            </ul>
+          <li>The Home Assistant user interface guides you through the initial onboarding.</li>
+          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
+        </ul>
 procedureCopyImageToSdCard:
   title: Copying the Home Assistant Green OS to the SD card
   steps:

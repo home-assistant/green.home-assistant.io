@@ -1,14 +1,15 @@
 ---
 layout: troubleshooting-guide
 description: Home Assistant Green
-guideName: Resetting the device
+guideName: Resetting the device using an SD card
 tools:
   title: Prerequisites
-  image: green_without_sd_card.png
+  image: green_sd_card.png
   content: |
     <ul>
         <li>Home&nbsp;Assistant Green</li>
-        <li>Home Assistant Operating System 13.1 or later installed</li>
+        <li>Home Assistant 13 or older and you cannot upgrade to Home Assistant 13.1 or later</li>
+        <li>Micro SD card</li>
         <li>PC with internet access</li>
         <li>You have <a href="/guides/create-backup/"
           target="_blank">created a backup</a> and stored it on another system.</li>
@@ -17,28 +18,30 @@ tools:
 
 <div class="container">
   <div><h1 class="text-center"></h1></div>
-  <div class="layout horizontal">         
+  <div class="layout horizontal guides">         
       <div class="layout vertical">
-        <p>Perform this procedure if you have Home Assistant 13.1 or later and you want to do a factory reset. If you have a new device, you likely have an older version of Home Assistant Operating System (older than 13.1). In this case perform <a href="/guides/reset_with_sd_card/">Resetting the device using an SD card</a>.</p>
+        <p>Perform this procedure if you want to do a factory reset and you cannot upgrade to Home Assistant 13.1 or later. </p>
       </div>
     </a>
+  </div>
+  <div class="text-center hint">
+        
   </div>
 </div>
 
 {% render "tools.include.liquid", tools: tools %}
-
 <div class="container">
   <div class="alert alert-note">
     <p class="alert-title">Note</p>
-    <p class="alert-content">This process clears the data disk on your Green. Unless you <a href="/guides/create-backup/"
+    <p class="alert-content">This process overwrites the complete internal disk on your Green and installs the latest version of Home Assistant OS. Unless you <a href="/guides/create-backup/"
       target="_blank">create a backup</a>, you will lose all data and configuration settings.</br></br>
-       A device reset wipes the data partition of your device. It removes all user data as well as Home Assistant Core, Supervisor, and any installed add-ons. The Home Assistant operating system stays on the system.</br></br>
-      Once a device wipe is initiated, the data partition is marked as to be cleared on boot. Then, the system reinstalls the latest version of all Home Assistant components.</p>
+      After installation your Green will be in the same state as when you first received it, but with the latest version of Home Assistant OS installed.</p> 
   </div>
 </div>  
 
 
-{% render "proc.include.liquid", proc: procedureFactoryResetNew %}
+{% render "proc.include.liquid", proc: procedureCopyImageToSdCard %}
+{% render "proc.include.liquid", proc: procedureFactoryReset %}
 
 <div class="container">
   
