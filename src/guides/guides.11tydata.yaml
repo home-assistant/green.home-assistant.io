@@ -229,7 +229,7 @@ procedureConnectTerminal:
           <li>Connect a USB keyboard to Home Assistant Green.</li>
         </ul>
     - title: Check the console
-      image: home-assistant-cli.png
+      image: home-assistant-cli.webp
       content: |
         <ul>
           <li>The console should open automatically and show up on the monitor.</li>
