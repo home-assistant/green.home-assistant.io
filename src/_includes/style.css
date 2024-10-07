@@ -239,6 +239,11 @@ h3 {
     max-width: 300px;
     margin: 8px 0;
   }
+
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .hint {
