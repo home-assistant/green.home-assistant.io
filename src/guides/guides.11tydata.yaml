@@ -48,7 +48,7 @@ procedureFactoryReset:
       image: getting_started_04.png
       content: |
         <ul>
-          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Info</b>: Initial startup may take a while, depending on your internet connection.</li>
           <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
           <li><b>Select your Home Assistant server</b>: 
             <ul>
@@ -56,7 +56,7 @@ procedureFactoryReset:
               <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant user interface.</li></li>
             </ul>
           <li>The Home Assistant user interface guides you through the initial onboarding.</li>
-          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
+          <li><b>Info</b>: For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 procedureFactoryResetNew:
   title: Resetting the device
@@ -92,7 +92,7 @@ procedureFactoryResetNew:
       image: getting_started_04.png
       content: |
         <ul>
-          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Info</b>: Initial startup may take a while, depending on your internet connection.</li>
           <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
           <li><b>Select your Home Assistant server</b>: 
             <ul>
@@ -100,7 +100,7 @@ procedureFactoryResetNew:
               <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant user interface.</li></li>
             </ul>
           <li>The Home Assistant user interface guides you through the initial onboarding.</li>
-          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
+          <li><b>Info</b>: For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 procedureCopyImageToSdCard:
   title: Copying the Home Assistant Green OS to the SD card
