@@ -1,6 +1,8 @@
+The content of this website has been migrated to https://github.com/NabuCasa/support
+
 # Home Assistant Green website
 
-This is the source of the Green documentation website at [green.home-assistant.io](https://green.home-assistant.io). 
+This was the source of the Green documentation website at [green.home-assistant.io](https://green.home-assistant.io). 
 
 ## Setup
 
